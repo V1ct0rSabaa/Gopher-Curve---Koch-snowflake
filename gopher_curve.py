@@ -1,9 +1,11 @@
-from turtle import *
+from turtle import forward, right, left, bgcolor, color, pensize, speed, left, goto, exitonclick
+# from turtle import *
 
-angulo_curva = 60
-regra_para_a = "A-B--B+A++AA+B-"
-regra_para_b = "+A-BB--B-A++A+B"
-def curvaGosper(ordem, tamanho, regra):
+angulo_curva: int = 60
+regra_para_a: str = "A-B--B+A++AA+B-"
+regra_para_b: str = "+A-BB--B-A++A+B"
+
+def curvaGosper(ordem: int, tamanho: float, regra: str) -> None:
     if ordem < 1:
         forward(tamanho)
         return
@@ -29,7 +31,5 @@ speed(10)
 left(90)
 goto(-100, -300)
 color("purple")
-#curvaGosper(1, 50, "B")
-#curvaGosper(2, 50, "B")
 curvaGosper(3, 50, "B")
 exitonclick()
